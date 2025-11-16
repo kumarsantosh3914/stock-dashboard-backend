@@ -1,24 +1,62 @@
-# Express TypeScript Starter Project
+# 8Byte Backend
 
-This is a boilerplate project for building server-side applications using [Express](https://expressjs.com/) and [TypeScript](https://www.typescriptlang.org/).pplication with TypeScript.
-
-## Features
-
-- 🚀 **Express**: A minimal and flexible Node.js web application framework.
-- 🛠️ **TypeScript**: Strongly typed programming language for better developer productivity.
+Backend service for the Stock Dashboard application, built with Node.js, Express, and TypeScript.
 
 ## Prerequisites
 
-Before you begin, ensure you have the following installed on your system:
-
-- [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/)
+- Node.js
+- npm
 
 ## Getting Started
 
-Follow these steps to get up and running:
-
-1. **Clone the repository**:
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/kumarsantosh3914/express-typescript-starter-project.git
-   cd express-typescript-starter-project
+   git clone https://github.com/kumarsantosh3914/stock-dashboard-backend.git
+   cd stock-dashboard-backend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Environment Setup**
+   - Copy `.env.example` to `.env`
+   - Update the environment variables as needed
+
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+## Project Structure
+
+```
+src/
+├── controllers/    # Route controllers
+├── models/         # Database models
+├── routes/         # API routes
+├── services/       # Business logic
+├── utils/          # Helper functions
+└── server.ts       # Application entry point
+```
+
+## Available Scripts
+
+- `dev`: Start development server with hot-reload
+- `build`: Compile TypeScript to JavaScript
+- `start`: Start production server
+- `test`: Run tests
+
+## Environment Variables
+
+Create a `.env` file in the root directory with the following variables:
+
+```
+PORT=3000
+REDIS_HOST='localhost'
+REDIS_PORT=6379
+DEFAULT_TTL=15
+PRICE_TTL=15
+METRICS_TTL=15
+```

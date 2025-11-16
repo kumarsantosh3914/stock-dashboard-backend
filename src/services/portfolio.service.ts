@@ -28,7 +28,7 @@ function detectSectorHeader(row: Record<string, any>): boolean {
   const name = row['Particulars'] ?? row['particulars'] ?? null;
   const sym = row['NSE/BSE'] ?? row['NSE'] ?? row['BSE'] ?? null;
   const qty = row['Qty'] ?? row['qty'] ?? null;
-  // Heuristics: no is null, has a name string, and no symbol/qty looks like a sector line
+  
   return (no === null || no === '') && typeof name === 'string' && (sym === null || sym === '') && (qty === null || qty === '');
 }
 
